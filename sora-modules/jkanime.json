@@ -11,7 +11,7 @@
    "streamType": "MP4",
    "quality": "1080p",
    "baseUrl": "https://www.jkanime.net/",
-   "searchBaseUrl": "https://www.jkanime.net/directorio",
+   "searchBaseUrl": "https://www.jkanime.net/buscar",
    "scriptUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-scraper/refs/heads/main/api/search.js",
    "asyncJS": true,
    "streamAsyncJS": true
