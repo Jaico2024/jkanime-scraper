@@ -1,9 +1,9 @@
 {
    "sourceName": "JK Anime",
-   "iconUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-scraper/refs/heads/main/sora-modules/jkanime.png",
+   "iconUrl": "https://cdn.jsdelivr.net/gh/Jaico2024/jkanime-scraper/sora-modules/jkanime.png",
    "author": {
        "name": "Jaico",
-       "icon": "https://raw.githubusercontent.com/Jaico2024/jkanime-scraper/refs/heads/main/sora-modules/jaico.png"
+       "icon": "https://cdn.jsdelivr.net/gh/Jaico2024/jkanime-scraper/sora-modules/jaico.png"
    },
    "version": "1.0.1",
    "type": "anime",
@@ -12,7 +12,7 @@
    "quality": "1080p",
    "baseUrl": "https://www.jkanime.net/",
    "searchBaseUrl": "https://www.jkanime.net/buscar",
-   "scriptUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-scraper/refs/heads/main/sora-modules/jkanime/jkanime.js",
+   "scriptUrl": "https://cdn.jsdelivr.net/gh/Jaico2024/jkanime-scraper/sora-modules/jkanime/jkanime.js",
    "asyncJS": true,
    "streamAsyncJS": true
 }
