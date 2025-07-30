@@ -12,7 +12,7 @@
    "quality": "1080p",
    "baseUrl": "https://www.jkanime.net/",
    "searchBaseUrl": "https://www.jkanime.net/buscar",
-   "scriptUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-scraper/refs/heads/main/sora-modules/jkanime.js",
+   "scriptUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-scraper/refs/heads/main/sora-modules/jkanime/jkanime.js",
    "asyncJS": true,
    "streamAsyncJS": true
 }
