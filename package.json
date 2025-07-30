@@ -1,0 +1,28 @@
+{
+  "name": "jkanime-scraper",
+  "version": "1.0.0",
+  "description": "Scraper local para JKAnime que luego será desplegado en Vercel",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "scraper",
+    "jkanime",
+    "puppeteer",
+    "vercel",
+    "api"
+  ],
+  "author": "Joan Castiblanco",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0",
+    "puppeteer": "^22.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
