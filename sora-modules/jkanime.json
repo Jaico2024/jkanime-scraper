@@ -1,12 +1,18 @@
 {
-"name": "JKAnime",
-"id": "jkanime",
-"site": "https://jkanime.net/",
-"version": 1,
-"endpoint": "https://jkanime-scraper.vercel.app/api/search?query=",
-"searchable": true,
-"paginated": false,
-"types": ["anime"],
-"filters": [],
-"imageProxy": false
+   "sourceName": "JK Anime",
+   "iconUrl": "https://raw.githubusercontent.com/Jaico2024/jkanime-scraper/refs/heads/main/sora-modules/jkanime.png",
+   "author": {
+       "name": "Jaico",
+       "icon": "https://raw.githubusercontent.com/Jaico2024/jkanime-scraper/refs/heads/main/sora-modules/jaico.png"
+   },
+   "version": "1.0.1",
+   "type": "anime",
+   "language": "Spanish (SUB)",
+   "streamType": "MP4",
+   "quality": "1080p",
+   "baseUrl": "https://www.jkanime.net/",
+   "searchBaseUrl": "https://www.jkanime.net/directorio",
+   "scriptUrl": "https://jkanime-scraper.vercel.app/jkanime.js",
+   "asyncJS": true,
+   "streamAsyncJS": true
 }
