@@ -1,0 +1,12 @@
+{
+"name": "JKAnime",
+"id": "jkanime",
+"site": "https://jkanime.net/",
+"version": 1,
+"endpoint": "https://jkanime-scraper.vercel.app/api/search?query=",
+"searchable": true,
+"paginated": false,
+"types": ["anime"],
+"filters": [],
+"imageProxy": false
+}
