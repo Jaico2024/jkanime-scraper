@@ -3,6 +3,11 @@ import handler from "./api/search.js";
 
 const app = express();
 
+// Ruta base para Railway
+app.get("/", (req, res) => {
+  res.send("✅ Servidor JKAnime Scraper activo");
+});
+
 // Ruta principal de búsqueda
 app.get("/api/search", handler);
 
@@ -29,7 +34,6 @@ app.get("/api/test-puppeteer", async (req, res) => {
   } catch (err) {
     console.error("❌ Error en Puppeteer:", err);
     res.status(500).json({ success: false, error: err.message });
-
   } finally {
     if (browser) await browser.close();
   }
