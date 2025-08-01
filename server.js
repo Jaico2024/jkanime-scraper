@@ -5,6 +5,30 @@ const app = express();
 
 app.get("/api/search", handler);
 
+app.get("/api/test-puppeteer", async (req, res) => {
+  const puppeteer = await import("puppeteer");
+  let browser;
+
+  try {
+    browser = await puppeteer.launch({
+      headless: "new",
+      args: ["--no-sandbox", "--disable-setuid-sandbox"]
+    });
+
+    const page = await browser.newPage();
+    await page.goto("https://www.google.com", { waitUntil: "domcontentloaded" });
+
+    const title = await page.title();
+    await browser.close();
+    res.json({ success: true, title });
+  } catch (err) {
+    if (browser) await browser.close();
+    console.error(err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);
