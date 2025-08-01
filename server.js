@@ -36,7 +36,7 @@ app.get("/api/test-puppeteer", async (req, res) => {
 });
 
 // Iniciar el servidor
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor escuchando en http://localhost:${PORT}`);
 });
