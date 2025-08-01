@@ -12,6 +12,7 @@ COPY . .
 
 # Exponer el puerto
 EXPOSE 3000
+ENV PORT=3000
 
 # Comando de inicio
 CMD ["npm", "start"]
