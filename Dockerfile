@@ -1,45 +1,17 @@
-# Usa una imagen oficial de Node con Puppeteer compatible
-FROM node:18-slim
+# Usa una imagen base con Puppeteer y Chromium preinstalado
+FROM ghcr.io/puppeteer/puppeteer:latest
 
-# Instala dependencias necesarias para Puppeteer
-RUN apt-get update && apt-get install -y \
-    wget \
-    ca-certificates \
-    fonts-liberation \
-    libappindicator3-1 \
-    libasound2 \
-    libatk-bridge2.0-0 \
-    libatk1.0-0 \
-    libcups2 \
-    libdbus-1-3 \
-    libgdk-pixbuf2.0-0 \
-    libnspr4 \
-    libnss3 \
-    libx11-xcb1 \
-    libxcomposite1 \
-    libxdamage1 \
-    libxrandr2 \
-    xdg-utils \
-    libgbm1 \
-    libgtk-3-0 \
-    --no-install-recommends && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-# Crea el directorio de trabajo
+# Establece el directorio de trabajo
 WORKDIR /app
 
-# Copia package.json y package-lock.json
-COPY package*.json ./
-
-# Instala dependencias
-RUN npm install
-
-# Copia el resto de archivos
+# Copia los archivos al contenedor
 COPY . .
 
-# Expone el puerto
+# Instala las dependencias del proyecto
+RUN npm install
+
+# Expón el puerto (Railway leerá desde process.env.PORT)
 EXPOSE 3000
 
-# Inicia el servidor
-CMD ["node", "server.js"]
+# Comando para iniciar la app
+CMD ["npm", "start"]
