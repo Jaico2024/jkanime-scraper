@@ -7,10 +7,11 @@ export default async function handler(req, res) {
   let browser;
 
   try {
-    browser = await puppeteer.launch({
-      headless: "new",
-      args: ["--no-sandbox", "--disable-setuid-sandbox"]
-    });
+browser = await puppeteer.launch({
+  headless: true,
+  args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  executablePath: "/usr/bin/chromium"
+});
 
     const page = await browser.newPage();
     await page.setUserAgent(
