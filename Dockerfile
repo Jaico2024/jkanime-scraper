@@ -1,6 +1,6 @@
 FROM node:20
 
-Instala Chromium y dependencias necesarias para puppeteer
+#Instala Chromium y dependencias necesarias para Puppeteer
 
 RUN apt-get update && apt-get install -y
 wget
@@ -27,3 +27,23 @@ libxss1
 libglu1
 chromium
 --no-install-recommends
+
+#Define directorio de trabajo
+
+WORKDIR /app
+
+#Copia tu proyecto al contenedor
+
+COPY . .
+
+#Instala dependencias del proyecto
+
+RUN npm install
+
+#Expone el puerto que usa tu app
+
+EXPOSE 3000
+
+#Comando para iniciar la aplicación
+
+CMD ["npm", "start"]
